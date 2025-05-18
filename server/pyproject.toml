@@ -1,0 +1,24 @@
+[project]
+name = "fastapi-summarizer"
+version = "0.1.0"
+description = "A simple FastAPI app for text summarization using HuggingFace Transformers."
+authors = [{name = "Tymek", email = "you@example.com"}]
+dependencies = [
+    "torch==2.2.2",
+    "fastapi",
+    "uvicorn[standard]",
+    "transformers",
+    "pydantic",
+]
+requires-python = "==3.12.*"
+
+[project.optional-dependencies]
+dev = ["black", "isort", "pytest"]
+
+[tool.pdm]
+[tool.pdm.scripts]
+start = "uvicorn main:app --reload"
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
