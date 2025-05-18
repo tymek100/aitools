@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "A simple FastAPI app for text summarization using HuggingFace Transformers."
 authors = [{name = "Tymek", email = "you@example.com"}]
 dependencies = [
-    "torch==2.2.2",
+    "torch",
     "fastapi",
     "uvicorn[standard]",
     "transformers",
